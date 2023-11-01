@@ -19,7 +19,7 @@ with open('data.csv', 'r') as file:
         # Convert each row to a dictionary.
         reading = {'Battery_Active_Power': row[0], 'Battery_Active_Power_Set_Response': row[1]}
         s = json.dumps(reading)  # Convert the reading into a JSON string.
-
+        print("Sending data " , i)
         # Create a batch and add event data to it.
         event_data_batch = producer.create_batch()
         event_data_batch.add(EventData(s))
