@@ -9,7 +9,7 @@ import csv
 from azure.eventhub import EventHubProducerClient, EventData
 
 # Create a producer client to produce and publish events to the event hub.
-producer = EventHubProducerClient.from_connection_string(conn_str="Endpoint=sb://analysisevent.servicebus.windows.net/;SharedAccessKeyName=sample;SharedAccessKey=on7aFNnRgq+myO74H2LqY7K7mHeelnODG+AEhNsLvmg=;EntityPath=battery", eventhub_name="analysisevent")
+producer = EventHubProducerClient.from_connection_string(conn_str="Endpoint=sb://analysisevent.servicebus.windows.net/;SharedAccessKeyName=sample;SharedAccessKey=on7aFNnRgq+myO74H2LqY7K7mHeelnODG+AEhNsLvmg=;EntityPath=battery", eventhub_name="battery")
 
 # Open the CSV file and read the first 10 lines.
 with open('data.csv', 'r') as file:
